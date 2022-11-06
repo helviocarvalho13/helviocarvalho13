@@ -27,7 +27,7 @@
  
  
 </div>
-
+<!--
   ##
   
 <h3> Links Customização Perfil Github </h3>
@@ -42,3 +42,4 @@ Repositório do Github Stats                             | https://github.com/an
 Site de Badges 1                                        | https://dev.to/envoy_/150-badges-for-github-pnk
 Passo a passo de como adicionar a cobrinha de commit    | https://www.instagram.com/p/CPjUBhXDNEE/
 
+-->
