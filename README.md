@@ -1,45 +1,73 @@
-<div style="display> inline_block">
-  <h3>Bounjour/Bonsoir, mi nombre es Helvio Carvalho. Nice to meet yout!</h3>
-</div>
+# Welcome to your Lovable project
 
-<div>
-  <a href="https://github.com/helviocarvalho13">
-  <img height="180em" src="https://github-readme-stats.vercel.app/api?username=helviocarvalho13&show_icons=true&theme=merko&include_all_commits=true&count_private=true"/>
-  <img height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=helviocarvalho13&layout=compact&langs_count=7&theme=merko"/>
-</div>
+## Project info
 
-<div style="display> inline_block"><br>
-  <img align="center" alt="Helvio-Angular" height="30" width="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/angularjs/angularjs-original.svg"> <img align="center" alt="Helvio-Typescript" height="30" width="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg"> 
-  <img align="center" alt="Helvio-Node" height="30" width="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg">
-  <img align="center" alt="Helvio-Java" height="30" width="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg">
-  <img align="center" alt="Helvio-Java" height="30" width="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg">
-  <img align="center" alt="Helvio-MySQL" height="30" width="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original-wordmark.svg"> <img align="center" alt="Helvio-Oracle" height="30" width="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/oracle/oracle-original.svg" />
-</div>
+**URL**: https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID
 
-  ##
-  
-<div> 
-  <a href="https://instagram.com/helviocarvalho77" target="_blank"><img src="https://img.shields.io/badge/-Instagram-%23E4405F?style=for-the-badge&logo=instagram&logoColor=white" target="_blank"></a>
-  <a href = "mailto:contatohelviocarvalho@gmail.com"><img src="https://img.shields.io/badge/-Gmail-%23333?style=for-the-badge&logo=gmail&logoColor=white" target="_blank"></a>
-  <a href="https://www.linkedin.com/in/helviocarvalho/" target="_blank"><img src="https://img.shields.io/badge/-LinkedIn-%230077B5?style=for-the-badge&logo=linkedin&logoColor=white" target="_blank"></a> 
- 
-![Snake animation](https://github.com/helviocarvalho13/helviocarvalho13/blob/output/github-contribution-grid-snake.svg)
- 
- 
-</div>
-<!--
-  ##
-  
-<h3> Links Customização Perfil Github </h3>
+## How can I edit this code?
 
-Categoria   | Link
-------------------------------------------------------- | ------------------------------------------------------------------------------------
-Repositório do roteiro do vídeo da Rafaella Ballerini:  | https://github.com/rafaballerini/PerfilGithub
-Repositório do perfil da Rafaella Ballerini             | https://github.com/rafaballerini/rafaballerini
-Guia de markdown                                        | https://docs.pipz.com/central-de-ajuda/learning-center/guia-basico-de-markdown#open
-Site de emojis                                          | https://emojipedia.org/search/?q=bag
-Repositório do Github Stats                             | https://github.com/anuraghazra/github-readme-stats
-Site de Badges 1                                        | https://dev.to/envoy_/150-badges-for-github-pnk
-Passo a passo de como adicionar a cobrinha de commit    | https://www.instagram.com/p/CPjUBhXDNEE/
+There are several ways of editing your application.
 
--->
+**Use Lovable**
+
+Simply visit the [Lovable Project](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and start prompting.
+
+Changes made via Lovable will be committed automatically to this repo.
+
+**Use your preferred IDE**
+
+If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+
+The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+
+Follow these steps:
+
+```sh
+# Step 1: Clone the repository using the project's Git URL.
+git clone <YOUR_GIT_URL>
+
+# Step 2: Navigate to the project directory.
+cd <YOUR_PROJECT_NAME>
+
+# Step 3: Install the necessary dependencies.
+npm i
+
+# Step 4: Start the development server with auto-reloading and an instant preview.
+npm run dev
+```
+
+**Edit a file directly in GitHub**
+
+- Navigate to the desired file(s).
+- Click the "Edit" button (pencil icon) at the top right of the file view.
+- Make your changes and commit the changes.
+
+**Use GitHub Codespaces**
+
+- Navigate to the main page of your repository.
+- Click on the "Code" button (green button) near the top right.
+- Select the "Codespaces" tab.
+- Click on "New codespace" to launch a new Codespace environment.
+- Edit files directly within the Codespace and commit and push your changes once you're done.
+
+## What technologies are used for this project?
+
+This project is built with:
+
+- Vite
+- TypeScript
+- React
+- shadcn-ui
+- Tailwind CSS
+
+## How can I deploy this project?
+
+Simply open [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and click on Share -> Publish.
+
+## Can I connect a custom domain to my Lovable project?
+
+Yes, you can!
+
+To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+
+Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
