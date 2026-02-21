@@ -1,5 +1,5 @@
 <h1 align="center">
-  🎮 You're welcome to my GitHub profile! You're in the right place! 🎮
+  You're welcome to my GitHub profile! You're in the right place! ✅
 </h1>
 
 <p align="center">
@@ -28,5 +28,5 @@
 ---
 
 <p align="center">
-  <sub>🎮 <b>GAME OVER?</b> Never. The adventure continues... 🍄</sub>
+  <sub>⭐ 🍄 💰 <b>GAME OVER?</b> Never. The adventure continues... 🍄 💰 ⭐</sub>
 </p>
