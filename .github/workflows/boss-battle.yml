@@ -1,0 +1,52 @@
+name: Boss Battle
+
+on:
+  issues:
+    types: [opened]
+
+permissions:
+  contents: write
+  issues: write
+
+# One move at a time, in the order the issues were opened.
+concurrency:
+  group: boss-battle
+  cancel-in-progress: false
+
+jobs:
+  play:
+    if: startsWith(github.event.issue.title, 'boss|')
+    runs-on: ubuntu-latest
+    env:
+      ISSUE_NUMBER: ${{ github.event.issue.number }}
+      PLAYER: ${{ github.event.issue.user.login }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Play move
+        id: play
+        env:
+          ISSUE_TITLE: ${{ github.event.issue.title }}
+          REPLY_FILE: ${{ runner.temp }}/reply.md
+        run: python3 game/engine.py play
+
+      - name: Commit new battle state
+        if: steps.play.outputs.result == 'ok'
+        env:
+          MOVE: ${{ steps.play.outputs.move }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add README.md game
+          git commit -m "Boss battle: @${PLAYER} ${MOVE} (#${ISSUE_NUMBER})"
+          git pull --rebase
+          git push
+
+      - name: Reply and close issue
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          REPLY_FILE: ${{ runner.temp }}/reply.md
+          REASON: ${{ steps.play.outputs.result == 'ok' && 'completed' || 'not planned' }}
+        run: |
+          gh issue comment "$ISSUE_NUMBER" --repo "$GITHUB_REPOSITORY" --body-file "$REPLY_FILE"
+          gh issue close "$ISSUE_NUMBER" --repo "$GITHUB_REPOSITORY" --reason "$REASON"
