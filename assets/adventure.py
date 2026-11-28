@@ -3,8 +3,8 @@
 
 Crisp pixel-art sprites live inside a layered "diorama" with depth of field
 (blurred background and foreground), golden-hour lighting, god rays, bloom,
-long shadows, floating dust and falling leaves. The hero walks a forest trail,
-cuts a bush and opens a chest holding the legendary code.
+long shadows, floating dust and falling leaves. A runner jogs down a forest trail,
+jumps a bush and opens a chest holding the legendary code.
 
 Everything is original art drawn as SVG with CSS animations, because GitHub
 READMEs do not run JavaScript.
@@ -53,45 +53,106 @@ for _line in _FONT_SRC.strip().splitlines():
 # --------------------------------------------------------------------------
 # Hand-drawn sprites ("." is transparent). Light comes from the upper right.
 # --------------------------------------------------------------------------
-HERO_TOP = [
-    "......KKKKK.........",
-    ".....KHhhjjK........",
-    "....KHHhhhjjK.......",
-    "...KHHHHhhhjjK......",
-    "...KHHHHHHhSSK......",
-    "...KHHHHHSSSEK......",
-    "...KHHHHsSSSSK......",
-    "....KHHsSSSSK.......",
-    "....KKsssssK........",
-    "..RRKqqqqqqK........",
-    ".RRrKuTTTTTuK.......",
-    ".RrrKtTTTTTuSK......",
-    "RRrrKtTTTTTuSK......",
-    "RrrrKLLLYLLLK.......",
-    "Rrrr.KtTTTTuK.......",
-    ".rrr.KtTTTTuK.......",
-    "..rr.KPPPPPpK.......",
-    ".....KPPKKPPK.......",
+# The hero is a runner: buzz cut, short beard, mirrored shield sunglasses,
+# black tank top, tattooed arms, white watch, compression shorts, black calf
+# sleeves and white running shoes. Facing right.
+HERO_HEAD = [
+    "......KKKKKK........",
+    ".....KHHHHHHK.......",
+    "....KhHHHHHHHK......",
+    "....KhSSSSSoSK......",
+    "....KGGGMMMMwK......",
+    "....KSGmmmmmmK......",
+    "....KsSSSSbbbK......",
+    "....KhSSbZZZbK......",
+    "....KhSbBBBBBK......",
+    ".....KsBBBBBK.......",
+    ".......KssK.........",
+]
+HERO_HEAD_SHAKA = HERO_HEAD[:9] + [
+    ".....KsBBBBBK.KSK...",
+    ".......KssK..KSSSK..",
+]
+HERO_ARMS = {
+    "run": [
+        "....KSKTTTTTTKSK....",
+        "...KASKTtLLTTKASK...",
+        "..KSAKKTTTTTTKSAK...",
+        "..KVK.KTTTTTTSSSSK..",
+        ".KSSK.KTTTTTTK.oK...",
+        ".KK...KTTTTTTK......",
+    ],
+    "side": [
+        "....KSKTTTTTTKSK....",
+        "....KAKTtLLTTKAK....",
+        "....KSKTTTTTTKSK....",
+        "....KVKTTTTTTKSSK...",
+        "....KSKTTTTTTKSoK...",
+        "......KTTTTTTK......",
+    ],
+    "shaka": [
+        "....KSKTTTTTTKSAK...",
+        "....KAKTtLLTTKSAK...",
+        "....KSKTTTTTTKKK....",
+        "....KVKTTTTTTK......",
+        "....KSKTTTTTTK......",
+        "......KTTTTTTK......",
+    ],
+}
+HERO_SHORTS = [
+    "......KPPPPPPK......",
+    "......KPpPPPPK......",
 ]
 HERO_LEGS = {
-    "stand": [".....KPpK.KPpK......", ".....KBBK.KBBK......",
-              "....KBBbK.KBBbK.....", "....KKKKK.KKKKK....."],
-    "walkA": ["....KPpK...KPpK.....", "...KBBK.....KBBK....",
-              "..KBBbK.....KBBbK...", "..KKKKK.....KKKKK..."],
-    "walkB": ["......KPPPpK........", "......KBBBBK........",
-              ".....KBBBBbK........", ".....KKKKKKK........"],
+    "runA": [
+        ".....KPPK..KPPPK....",
+        "....KSSK....KSSK....",
+        "...KCCK.....KCCK....",
+        "..KCCK......KCCK....",
+        ".KWWK.......KWWWK...",
+        "KWWxK.......KWWWxK..",
+        "KKKK........KKKKK...",
+    ],
+    "runB": [
+        "........KPPPK.......",
+        "........KSSK........",
+        ".......KCCKCK.......",
+        ".......KCCKCCK......",
+        ".......KWWK.KWK.....",
+        "......KWWWxK........",
+        "......KKKKKK........",
+    ],
+    "stand": [
+        "......KPPKKPPK......",
+        "......KSSKKSSK......",
+        "......KCCKKCCK......",
+        "......KCCKKCCK......",
+        "......KWWKKWWWK.....",
+        ".....KWWxKKWWWxK....",
+        ".....KKKKKKKKKKK....",
+    ],
+    "jump": [
+        "......KPPKKPPK......",
+        ".....KSSK..KSSK.....",
+        "....KCCK....KCCK....",
+        "...KWWK......KWWK...",
+        "...KKKK......KKKK...",
+        "....................",
+        "....................",
+    ],
 }
-HERO_PAL = {"K": "#1b1424", "H": "#3d2418", "h": "#6b3d24", "j": "#a8653a", "S": "#f0b98d",
-            "s": "#c98764", "E": "#1b1424", "R": "#b83a2e", "r": "#7d2520", "q": "#e0674a",
-            "T": "#2f6f73", "t": "#1f4c50", "u": "#5aa8a4", "L": "#6b4226", "Y": "#e9b949",
-            "P": "#3b3346", "p": "#5a5068", "B": "#5a3a22", "b": "#8a5a32"}
-
-SWORD = [
-    "..KKKKKKKKKKK.",
-    "YKWWWWWWWWWWWK",
-    "..KKKKKKKKKKK.",
-]
-SWORD_PAL = {"K": "#1b1424", "Y": "#e9b949", "W": "#eef2f7"}
+HERO_FRAMES = {
+    "runA": HERO_HEAD + HERO_ARMS["run"] + HERO_SHORTS + HERO_LEGS["runA"],
+    "runB": HERO_HEAD + HERO_ARMS["side"] + HERO_SHORTS + HERO_LEGS["runB"],
+    "jump": HERO_HEAD + HERO_ARMS["run"] + HERO_SHORTS + HERO_LEGS["jump"],
+    "stand": HERO_HEAD + HERO_ARMS["side"] + HERO_SHORTS + HERO_LEGS["stand"],
+    "shaka": HERO_HEAD_SHAKA + HERO_ARMS["shaka"] + HERO_SHORTS + HERO_LEGS["stand"],
+}
+HERO_PAL = {"K": "#17121c", "H": "#231b18", "h": "#5a4436", "S": "#d9a27a", "s": "#b07a56",
+            "o": "#ecbd96", "G": "#2b2d33", "M": "#d7dee8", "m": "#8e9aab", "w": "#ffffff",
+            "B": "#2a211d", "b": "#4a3a30", "Z": "#f5f5f5", "T": "#1d1d22", "t": "#3a3a44",
+            "L": "#8a8a96", "A": "#5d4637", "V": "#f2f2f2", "P": "#16161a", "p": "#34343c",
+            "C": "#1a1a1e", "W": "#f4f4f4", "x": "#c9c9cf"}
 
 CHEST_CLOSED = [
     "..KKKKKKKKKKKK..",
@@ -239,8 +300,9 @@ FOLIAGE_PAL = {k: blend(v, "#0b1a10", 0.45) for k, v in LEAF_PAL.items()}
 
 
 def _check():
-    for rows in [HERO_TOP + v for v in HERO_LEGS.values()] + [SWORD, CHEST_CLOSED, CHEST_OPEN, CODE_ITEM]:
+    for rows in list(HERO_FRAMES.values()) + [CHEST_CLOSED, CHEST_OPEN, CODE_ITEM]:
         assert all(len(r) == len(rows[0]) for r in rows), rows
+    assert len({len(f) for f in HERO_FRAMES.values()}) == 1, "hero frames must share a height"
 
 
 _check()
@@ -471,7 +533,9 @@ def build():
              f'{bush_x + 60} {FEET} {bush_x - 30} {FEET + 14} {bush_x - 60} {FEET + 10}"/>'
              f'<g shape-rendering="crispEdges">{sprite(BUSH, BUSH_PAL, bush_x, bush_y)}</g></g>')
     css.append(f".bush{{animation:bush {T}s steps(1) infinite}}" +
-               kf("bush", ("0%", "opacity:1"), ("32.5%", "opacity:0"), ("100%", "opacity:0")))
+               kf("bush", ("0%", "transform:translateX(0)"), ("42%", "transform:translateX(3px)"),
+                  ("43%", "transform:translateX(-3px)"), ("44%", "transform:translateX(2px)"),
+                  ("45%,100%", "transform:translateX(0)")))
 
     # chest
     cx, cy = 672, FEET - 2 - len(CHEST_CLOSED) * S
@@ -486,51 +550,63 @@ def build():
                kf("cho", ("0%", "opacity:0"), ("62%", "opacity:1"), ("100%", "opacity:1")))
 
     # hero
-    hero_rows = len(HERO_TOP) + 4
+    # Timeline (% of the loop): run 3-36.5, jump over the bush 36.5-47.5, run to the
+    # chest 47.5-58, stand 58-64, then "hang loose" while the treasure rises.
+    hero_rows = len(HERO_FRAMES["stand"])
     hy = FEET - hero_rows * S
-    frames = {k: sprite(HERO_TOP + v, HERO_PAL, 0, 0) for k, v in HERO_LEGS.items()}
-    sword = sprite(SWORD, SWORD_PAL, 54, 33)
-    arc_pts = [math.radians(d) for d in range(-75, 76, 10)]
-    arc = "".join(f'<rect x="{round(36 + math.cos(a) * 42) - 3}" y="{round(36 + math.sin(a) * 42) - 3}" '
-                  f'width="6" height="6"/>' for a in arc_pts)
+    frames = {k: sprite(v, HERO_PAL, 0, 0) for k, v in HERO_FRAMES.items()}
     foot = hero_rows * S
-    hero = (f'<ellipse cx="30" cy="{foot}" rx="24" ry="5" fill="url(#shade)"/>'
+    hero = (f'<g class="hsh"><ellipse cx="30" cy="{foot}" rx="24" ry="5" fill="url(#shade)"/>'
             f'<polygon fill="#1b2433" opacity=".3" filter="url(#fSoft)" points="18 {foot} 44 {foot} '
-            f'-50 {foot + 14} -80 {foot + 10}"/>'
-            '<g shape-rendering="crispEdges">'
-            f'<g class="walk"><g class="wa">{frames["walkA"]}</g><g class="wb">{frames["walkB"]}</g></g>'
-            f'<g class="stand">{frames["stand"]}</g><g class="atk">{sword}</g></g>'
-            f'<g class="arc"><g fill="#fff6d8" filter="url(#fBloom)">{arc}</g>'
-            f'<g fill="#ffffff" shape-rendering="crispEdges">{arc}</g></g>')
+            f'-50 {foot + 14} -80 {foot + 10}"/></g>'
+            '<g class="jump"><g shape-rendering="crispEdges">'
+            f'<g class="run"><g class="ra">{frames["runA"]}</g>'
+            f'<g class="rb"><g transform="translate(0 -3)">{frames["runB"]}</g></g></g>'
+            f'<g class="air">{frames["jump"]}</g>'
+            f'<g class="stand">{frames["stand"]}</g>'
+            f'<g class="shaka">{frames["shaka"]}</g></g></g>')
     L.append(f'<g class="hero">{hero}</g>')
     css.append(f".hero{{animation:hero {T}s linear infinite}}" +
-               kf("hero", ("0%,3%", at(-80, hy)), ("30%,35%", at(344, hy)), ("58%,100%", at(606, hy))) +
-               f".walk{{animation:walk {T}s steps(1) infinite}}" +
-               kf("walk", ("0%", "opacity:0"), ("3%", "opacity:1"), ("30%", "opacity:0"), ("35%", "opacity:1"),
+               kf("hero", ("0%,3%", at(-80, hy)), ("58%,100%", at(606, hy))) +
+               f".jump{{animation:jump {T}s infinite}}" +
+               kf("jump", ("0%,36.5%", "transform:translateY(0);animation-timing-function:ease-out"),
+                  ("42%", "transform:translateY(-72px);animation-timing-function:ease-in"),
+                  ("47.5%,100%", "transform:translateY(0)")) +
+               f".hsh{{transform-box:fill-box;transform-origin:center;animation:hsh {T}s infinite}}" +
+               kf("hsh", ("0%,36.5%", "transform:scale(1);opacity:1;animation-timing-function:ease-out"),
+                  ("42%", "transform:scale(.5);opacity:.45;animation-timing-function:ease-in"),
+                  ("47.5%,100%", "transform:scale(1);opacity:1")) +
+               f".run{{animation:run {T}s steps(1) infinite}}" +
+               kf("run", ("0%", "opacity:0"), ("3%", "opacity:1"), ("36.5%", "opacity:0"), ("47.5%", "opacity:1"),
                   ("58%", "opacity:0"), ("100%", "opacity:0")) +
+               f".air{{opacity:0;animation:air {T}s steps(1) infinite}}" +
+               kf("air", ("0%", "opacity:0"), ("36.5%", "opacity:1"), ("47.5%", "opacity:0"), ("100%", "opacity:0")) +
                f".stand{{animation:stand {T}s steps(1) infinite}}" +
-               kf("stand", ("0%", "opacity:1"), ("3%", "opacity:0"), ("30%", "opacity:1"), ("35%", "opacity:0"),
-                  ("58%", "opacity:1"), ("100%", "opacity:1")) +
-               ".wa{animation:wa .4s steps(1) infinite}" + kf("wa", ("50%", "opacity:0")) +
-               ".wb{opacity:0;animation:wb .4s steps(1) infinite}" + kf("wb", ("50%", "opacity:1")) +
-               f".atk{{opacity:0;animation:atk {T}s steps(1) infinite}}" +
-               kf("atk", ("0%", "opacity:0"), ("30.5%", "opacity:1"), ("34%", "opacity:0"), ("100%", "opacity:0")) +
-               f".arc{{opacity:0;animation:arc {T}s linear infinite}}" +
-               kf("arc", ("0%,31.2%", "opacity:0"), ("31.6%", "opacity:1"), ("33.6%,100%", "opacity:0")))
+               kf("stand", ("0%", "opacity:1"), ("3%", "opacity:0"), ("58%", "opacity:1"), ("64%", "opacity:0"),
+                  ("100%", "opacity:0")) +
+               f".shaka{{opacity:0;animation:shaka {T}s steps(1) infinite}}" +
+               kf("shaka", ("0%", "opacity:0"), ("64%", "opacity:1"), ("100%", "opacity:1")) +
+               ".ra{animation:ra .34s steps(1) infinite}" + kf("ra", ("50%", "opacity:0")) +
+               ".rb{opacity:0;animation:rb .34s steps(1) infinite}" + kf("rb", ("50%", "opacity:1")))
 
-    # leaves bursting out of the cut bush
-    bcx, bcy = bush_x + 30, bush_y + 24
-    for i in range(12):
-        ang = -math.pi / 2 + (i - 5.5) * 0.28
-        dx, peak = round(math.cos(ang) * rnd.uniform(40, 80)), round(rnd.uniform(26, 56))
-        land = FEET - rnd.randrange(0, 20)
+    # leaves flicked up from the bush as the hero clears it, and dust on landing
+    bcx, bcy = bush_x + 30, bush_y + 6
+    for i in range(7):
+        dx, peak = rnd.randrange(-40, 41), rnd.randrange(18, 40)
+        land = FEET - rnd.randrange(2, 16)
         color = ["#5aa03f", "#8cc85c", "#3f7d31", "#d4ef92"][i % 4]
         L.append(f'<rect class="lf{i}" x="-3" y="-3" width="6" height="6" fill="{color}"/>')
         css.append(f".lf{i}{{opacity:0;animation:lf{i} {T}s linear infinite}}" +
-                   kf(f"lf{i}", ("0%,32.5%", at(bcx, bcy) + ";opacity:0;animation-timing-function:ease-out"),
-                      ("33%", "opacity:1"),
-                      ("36%", at(bcx + dx * 0.6, bcy - peak) + ";animation-timing-function:ease-in"),
-                      ("41%", at(bcx + dx, land) + ";opacity:1"), ("45%,100%", at(bcx + dx, land) + ";opacity:0")))
+                   kf(f"lf{i}", ("0%,41.5%", at(bcx, bcy) + ";opacity:0;animation-timing-function:ease-out"),
+                      ("42%", "opacity:1"),
+                      ("45%", at(bcx + dx * 0.6, bcy - peak) + ";animation-timing-function:ease-in"),
+                      ("51%", at(bcx + dx, land) + ";opacity:1"), ("55%,100%", at(bcx + dx, land) + ";opacity:0")))
+    lx = round(-80 + (47.5 - 3) / 55 * 686) + 30
+    for i, dx in enumerate((-30, -16, 14, 28)):
+        L.append(f'<circle class="ds{i}" r="{5 - abs(dx) // 14}" fill="#e8cfa0" opacity=".8"/>')
+        css.append(f".ds{i}{{opacity:0;animation:ds{i} {T}s ease-out infinite}}" +
+                   kf(f"ds{i}", ("0%,47.4%", at(lx, FEET - 2) + ";opacity:0"), ("47.5%", "opacity:.85"),
+                      ("52%", at(lx + dx, FEET - 10) + ";opacity:0"), ("100%", at(lx + dx, FEET - 10) + ";opacity:0")))
 
     # treasure: light burst, bloom, rising item, sparkles
     ccx = cx + 24
@@ -658,7 +734,7 @@ def build():
 
     return (
         f'<svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{H}" viewBox="0 0 {W} {H}" role="img" '
-        'aria-label="HD-2D style pixel adventure: a hero walks a sunlit forest trail, cuts a bush and opens a '
+        'aria-label="HD-2D style pixel adventure: a runner jogs a sunlit forest trail, jumps a bush and opens a '
         'chest with the legendary code">'
         '<title>Pixel adventure</title>'
         f'<style>{"".join(css)}</style><defs>{defs()}{mask}</defs>'

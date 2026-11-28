@@ -31,7 +31,7 @@
 ---
 
 <p align="center">
-  <img src="./assets/adventure.svg" width="800" alt="Aventura em pixel art: um herói atravessa a trilha da floresta, corta um arbusto e abre um baú com o código lendário" />
+  <img src="./assets/adventure.svg" width="800" alt="Aventura em pixel art: um corredor atravessa a trilha da floresta, salta um arbusto e abre um baú com o código lendário" />
 </p>
 
 <p align="center">
