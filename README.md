@@ -19,13 +19,13 @@
 ---
 
 <div align="center" style="display: inline_block"><br>
-  <img align="center" alt="Flutter" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/flutter/flutter-original.svg">
-  <img align="center" alt="Angular" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/angular/angular-original.svg">
-  <img align="center" alt="Node.js" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original.svg">
-  <img align="center" alt="Java" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/java/java-original.svg">
-  <img align="center" alt="PostgreSQL" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/postgresql/postgresql-original.svg">
-  <img align="center" alt="Claude Code" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/claude/claude-original.svg">
-  <img align="center" alt="Docker" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/docker/docker-original.svg">
+  <img alt="Flutter" height="36" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/flutter/flutter-original.svg"> &nbsp;
+  <img alt="Angular" height="36" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/angular/angular-original.svg"> &nbsp;
+  <img alt="Node.js" height="36" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original.svg"> &nbsp;
+  <img alt="Java" height="36" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/java/java-original.svg"> &nbsp;
+  <img alt="PostgreSQL" height="36" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/postgresql/postgresql-original.svg"> &nbsp;
+  <img alt="Claude Code" height="36" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/claude/claude-original.svg"> &nbsp;
+  <img alt="Docker" height="36" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/docker/docker-original.svg">
 </div>
 
 ---
